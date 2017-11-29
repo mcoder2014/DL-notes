@@ -1,4 +1,6 @@
-# TensorFlow 入门方式
-1. 你们平时使用TensorFlow时会和TFlearn一起使用吗？
-2. 有些简单基本的CNN的网络可以实现用来练手嘛？
-3. 我能在这边的机器上跑程序嘛？
+# TensorFlow 入门
+
+虽然`TensorFlow`有好多个高层次的封装库，但还是要学会基本的才行。
+
+学习`TensorFlow`首先需要会使用python，这里有一个中文学习python的网页，内容感觉很棒
+[Python 入门指南](http://www.pythondoc.com/pythontutorial3/index.html)
