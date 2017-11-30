@@ -1,5 +1,8 @@
 # 卷积神经网络`(CNN)`
-江超群
+
+### ** [回首页](README.md) **
+
+我最近研究的问题是与[卷积神经网络](Convolutional_neural_network.md)相关的，所以我看完了机器学习课程后首先看的就是深度学习中和卷积神经网络相关的部分，主要看卷积神经网络的结构和一些经典的综述性文章。比如英文在线电子书[Deep Learning](http://www.deeplearningbook.org/)中第九章[Convolutional Networks](http://www.deeplearningbook.org/contents/convnets.html)，这本书也有对应的[中文版电子书](https://github.com/exacity/deeplearningbook-chinese)，同时，他的纸质版在[京东](https://item.jd.com/12128543.html)发售，价格昂贵，暂时还没舍得买。
 
 # 定义
 卷积神经网络（`Convolutional Neural Network, CNN or ConvNet`）是一种前馈神经网络，它的人工神经元可以响应一部分覆盖范围内的周围单元，对于大型图像处理有出色表现。
@@ -19,3 +22,6 @@ Rectified Linear Units layer 线性整流层
 全连接层
 ## Loss layer
 损失函数层
+
+
+### ** [回首页](README.md) **

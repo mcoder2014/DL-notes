@@ -1,4 +1,7 @@
 # Python Tips
+
+### ** [回首页](README.md) **
+
 这个是我在学习`Python`时，阅读[Python 入门指南](http://www.pythondoc.com/pythontutorial3/index.html)时，记录的一些`Python`与我常识中的编程语言不慎相同的地方，在这里记录一下，免得自己以后给忘掉了。
 
 # 基础
@@ -648,3 +651,6 @@ Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0
 ```
 
 pip 还有更多的选项。请参考 installing-index 指南获取关于 pip 完整的文档。当你编写一个包并且在 Python Package Index 中也出现的话，请参考 distributing-index 指南。
+
+
+### ** [回首页](README.md) **
