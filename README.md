@@ -7,6 +7,8 @@
 ## 卷积神经网络
 我最近研究的问题是与[卷积神经网络](Convolutional_neural_network.md)相关的，所以我看完了机器学习课程后首先看的就是深度学习中和卷积神经网络相关的部分，主要看卷积神经网络的结构和一些经典的综述性文章。比如英文在线电子书[Deep Learning](http://www.deeplearningbook.org/)中第九章[Convolutional Networks](http://www.deeplearningbook.org/contents/convnets.html)，这本书也有对应的[中文版电子书](https://github.com/exacity/deeplearningbook-chinese)，同时，他的纸质版在[京东](https://item.jd.com/12128543.html)发售，价格昂贵，暂时还没舍得买。
 
+这里是我对论文[Jackson A S, Bulat A, Argyriou V, et al. Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression[J]. 2017. ](https://arxiv.org/abs/1703.07834) 的一点点理解[笔记](Large_pose_3d_face_reconstruction.md)
+
 ## TensorFlow
 在介绍学习[TensorFlow](https://www.tensorflow.org/?hl=zh-cn)之前我们肯定要先会使用Python。我发现了一个[Python入门指南](http://www.pythondoc.com/pythontutorial3/index.html)，内容很是详细，有编程基础的人，照着走一遍流程，不到两天就能学完（从下午到晚上，看到了第九章）。同样，这个也有英文原版，英语比较好的建议直接阅读[原版](https://docs.python.org/3.6/tutorial/index.html)。我为了自己能看的快一些，所以直接看的中文版。
 
@@ -18,3 +20,4 @@
 - [卷积神经网络](Convolutional_neural_network.md)
 - [TensorFlow](TensorFlow入门.md)
 - [Python Tips](Python_tips.md)
+- [人脸重建笔记](Large_pose_3d_face_reconstruction.md)
