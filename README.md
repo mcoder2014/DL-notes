@@ -4,8 +4,15 @@
 ## 作者说明
 - 河海大学物联网应用与技术研究生
 - 联系方式： email: `mcoder2014@sina.com`
+
 # 基础知识
 学习深度学习，首先我们需要对深度学习有一定的了解，这里比较公认的是[斯坦福大学吴恩达教授的机器学习课程](https://www.coursera.org/learn/machine-learning)。深度学习(`deep learning`)是机器学习拉出来的分支，目前广泛使用`TensorFlow`库进行开发学习。所以，学习深度学习最好需要学习一下`TensorFlow`，可以做到事半功倍。
+
+`TensorFlow`最好安装在Linux系统下，而我们对linux操作不熟悉的怎么办呢？？
+
+**当！然！是！去！学！呀！不！然！呢！**
+
+这里我整理一些可能会比较好用的[linux上的命令、软件啥的](linux_tips.md)，希望能给大家带来一些比较不错的使用体验。
 
 ## 卷积神经网络
 我最近研究的问题是与[卷积神经网络](Convolutional_neural_network.md)相关的，所以我看完了机器学习课程后首先看的就是深度学习中和卷积神经网络相关的部分，主要看卷积神经网络的结构和一些经典的综述性文章。比如英文在线电子书[Deep Learning](http://www.deeplearningbook.org/)中第九章[Convolutional Networks](http://www.deeplearningbook.org/contents/convnets.html)，这本书也有对应的[中文版电子书](https://github.com/exacity/deeplearningbook-chinese)，同时，他的纸质版在[京东](https://item.jd.com/12128543.html)发售，价格昂贵，暂时还没舍得买。
