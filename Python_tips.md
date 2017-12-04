@@ -9,7 +9,7 @@
 一般用四个空格缩进而不是tab键进行缩进。而且python语句的每句话结尾不需要';'分号。
 
 ## if 语句
-```
+```python
 >>> x = int(input("Please enter an integer: "))
 Please enter an integer: 42
 >>> if x < 0:
@@ -26,7 +26,7 @@ More
 ```
 
 ## for 语句
-```
+``` python
 >>> # Measure some strings:
 ... words = ['cat', 'window', 'defenestrate']
 >>> for w in words:
@@ -39,7 +39,7 @@ defenestrate 12
 
 ## range()函数
 
-```
+```python
 >>> list(range(10))
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 >>> list(range(1, 11))
@@ -61,7 +61,7 @@ break 语句和 C 中的类似，用于跳出最近的一级 for 或 while 循�
 
 循环可以有一个 else 子句；它在循环迭代完整个列表（对于 for ）或执行条件为 false （对于 while ）时执行，但循环被 break 中止的情况下不会执行。以下搜索素数的示例程序演示了这个子句:
 
-```
+``` python
 >>> for n in range(2, 10):
 ...     for x in range(2, n):
 ...         if n % x == 0:
@@ -83,7 +83,7 @@ break 语句和 C 中的类似，用于跳出最近的一级 for 或 while 循�
 
 ## pass语句
 就是啥也不做，占位用的。
-```
+``` python
 >>> while True:
 ...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
 ...
@@ -91,7 +91,7 @@ break 语句和 C 中的类似，用于跳出最近的一级 for 或 while 循�
 
 ## 定义函数
 
-```
+``` python
 >>> def fib(n):    # write Fibonacci series up to n
 ...     """Print a Fibonacci series up to n."""
 ...     a, b = 0, 1
@@ -125,7 +125,7 @@ break 语句和 C 中的类似，用于跳出最近的一级 for 或 while 循�
 
 # 类
 ## 类的定义
-```
+``` python
 class ClassName:
     <statement-1>
     .
@@ -142,7 +142,7 @@ class ClassName:
 **一般，类的方法的第一个参数被命名为 self。** 这仅仅是一个约定：对 Python 而言，名称 self 绝对没有任何特殊含义。（但是请注意：如果不遵循这个约定，对其他的 Python 程序员而言你的代码可读性就会变差，而且有些 类查看器 程序也可能是遵循此约定编写的。）
 
 ## 类的继承
-```
+``` python
 class DerivedClassName(BaseClassName):
     <statement-1>
     .
@@ -172,7 +172,7 @@ Python 不存在私有变量的设置。然而，也有一个变通的访问用�
 因为有一个正当的类私有成员用途（即避免子类里定义的命名与之冲突），Python 提供了对这种结构的有限支持，称为 name mangling （命名编码） 。任何形如 `__spam` 的标识（前面至少两个下划线，后面至多一个），被替代为 `_classname__spam` ，去掉前导下划线的 classname 即当前的类名。此语法不关注标识的位置，只要求在类定义内。
 
 名称重整是有助于子类重写方法，而不会打破组内的方法调用。例如:
-```
+``` python
 class Mapping:
     def __init__(self, iterable):
         self.items_list = []
@@ -196,7 +196,7 @@ class MappingSubclass(Mapping):
 ## 迭代器
 现在你可能注意到大多数容器对象都可以用 for 遍历:
 
-```
+``` python
 for element in [1, 2, 3]:
     print(element)
 for element in (1, 2, 3):
@@ -211,7 +211,7 @@ for line in open("myfile.txt"):
 
 这种形式的访问清晰、简洁、方便。迭代器的用法在 Python 中普遍而且统一。在后台， for 语句在容器对象中调用 iter() 。该函数返回一个定义了 `__next__()` 方法的迭代器对象，它在容器中逐一访问元素。没有后续的元素时， `__next__()` 抛出一个 `StopIteration` 异常通知 for 语句循环结束。你可以是用内建的 next() 函数调用 `__next__()` 方法；以下是其工作原理的示例:
 
-```
+``` python
 >>> s = 'abc'
 >>> it = iter(s)
 >>> it
@@ -231,7 +231,7 @@ StopIteration
 
 了解了迭代器协议的后台机制，就可以很容易的给自己的类添加迭代器行为。定义一个 `__iter__()` 方法，使其返回一个带有 `__next__()` 方法的对象。如果这个类已经定义了 `__next__()` ，那么 `__iter__()` 只需要返回 self:
 
-```
+``` python
 class Reverse:
     """Iterator for looping over a sequence backwards."""
     def __init__(self, data):
@@ -246,7 +246,7 @@ class Reverse:
         return self.data[self.index]
 ```
 
-```
+``` python
 >>> rev = Reverse('spam')
 >>> iter(rev)
 <__main__.Reverse object at 0x00A1DB50>
@@ -263,7 +263,7 @@ s
 
 Generator 是创建迭代器的简单而强大的工具。它们写起来就像是正规的函数，需要返回数据的时候使用 yield 语句。每次 next() 被调用时，生成器回复它脱离的位置（它记忆语句最后一次执行的位置和所有的数据值）。以下示例演示了生成器可以很简单的创建出来:
 
-```
+``` python
 def reverse(data):
     for index in range(len(data)-1, -1, -1):
         yield data[index]
@@ -284,7 +284,7 @@ g
 
 # Python 标准库
 ## 操作系统接口
-```
+``` python
 import os
 ```
 针对日常的文件和目录管理任务，`shutil`模块提供了一个易于使用的高级接口：
@@ -298,7 +298,7 @@ import os
 
 ## 文件通配符
 `glob`模块提供了一个函数用于从目录通配符搜索中生成文件列表：
-```
+``` python
 >>> import glob
 >>> glob.glob('*.py')
 ['primes.py', 'random.py', 'quote.py']
@@ -316,7 +316,7 @@ getopt 模块使用 Unix getopt() 函数处理 sys.argv。更多的复杂命令�
 ## 错误输出重定向和程序终止
 sys 还有 stdin， stdout 和 stderr 属性，即使在 stdout 被重定向时，后者也可以用于显示警告和错误信息:
 
-```
+``` python
 >>> sys.stderr.write('Warning, log file not found starting a new one\n')
 Warning, log file not found starting a new one
 ```
@@ -325,7 +325,7 @@ Warning, log file not found starting a new one
 
 ## 字符串正则匹配
 re 模块为高级字符串处理提供了正则表达式工具。对于复杂的匹配和处理，正则表达式提供了简洁、优化的解决方案:
-```
+``` python
 >>> import re
 >>> re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
 ['foot', 'fell', 'fastest']
@@ -341,7 +341,7 @@ re 模块为高级字符串处理提供了正则表达式工具。对于复杂�
 
 ## 互联网访问
 有几个模块用于访问互联网以及处理网络通信协议。其中最简单的两个是用于处理从 urls 接收的数据的 urllib.request 以及用于发送电子邮件的 smtplib:
-```
+``` python
 >>> from urllib.request import urlopen
 >>> for line in urlopen('http://tycho.usno.navy.mil/cgi-bin/timer.pl'):
 ...     line = line.decode('utf-8')  # Decoding the binary data to text.
@@ -364,7 +364,8 @@ re 模块为高级字符串处理提供了正则表达式工具。对于复杂�
 
 ## 时间和日期
 datetime 模块为日期和时间处理同时提供了简单和复杂的方法。支持日期和时间算法的同时，实现的重点放在更有效的处理和格式化输出。该模块还支持时区处理。
-```
+
+``` python
 >>> # dates are easily constructed and formatted
 >>> from datetime import date
 >>> now = date.today()
@@ -383,7 +384,7 @@ datetime.date(2003, 12, 2)
 ## 数据压缩
 以下模块直接支持通用的数据打包和压缩格式：zlib， gzip， bz2， lzma， zipfile 以及 tarfile。
 
-```
+``` python
 >>> import zlib
 >>> s = b'witch which has which witches wrist watch'
 >>> len(s)
@@ -401,7 +402,7 @@ b'witch which has which witches wrist watch'
 有些用户对了解解决同一问题的不同方法之间的性能差异很感兴趣。Python 提供了一个度量工具，为这些问题提供了直接答案。
 
 例如，使用元组封装和拆封来交换元素看起来要比使用传统的方法要诱人的多。timeit 证明了后者更快一些:
-```
+``` python
 >>> from timeit import Timer
 >>> Timer('t=a; a=b; b=t', 'a=1; b=2').timeit()
 0.57535828626024577
@@ -428,7 +429,7 @@ Python 展现了“瑞士军刀”的哲学。这可以通过它更大的包的�
 
 下面的代码显示了高级模块 threading 如何在主程序运行的同时运行任务:
 
-```
+``` python
 import threading, zipfile
 
 class AsyncZip(threading.Thread):
@@ -459,7 +460,7 @@ print('Main program waited until background was done.')
 
 array 模块提供了一个类似列表的 array() 对象，它仅仅是存储数据，更为紧凑。以下的示例演示了一个存储双字节无符号整数的数组（类型编码 "H" ）而非存储 16 字节 Python 整数对象的普通正规列表:
 
-```
+``` python
 >>> from array import array
 >>> a = array('H', [4000, 10, 700, 22222])
 >>> sum(a)
@@ -470,7 +471,7 @@ array('H', [10, 700])
 
 collections 模块提供了类似列表的 deque() 对象，它从左边添加（append）和弹出（pop）更快，但是在内部查询更慢。这些对象更适用于队列实现和广度优先的树搜索:
 
-```
+``` python
 >>> from collections import deque
 >>> d = deque(["task1", "task2", "task3"])
 >>> d.append("task4")
@@ -487,7 +488,7 @@ def breadth_first_search(unsearched):
 
 除了链表的替代实现，该库还提供了 bisect 这样的模块以操作存储链表:
 
-```
+``` python
 >>> import bisect
 >>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]
 >>> bisect.insort(scores, (300, 'ruby'))
@@ -497,7 +498,7 @@ def breadth_first_search(unsearched):
 
 heapq 提供了基于正规链表的堆实现。最小的值总是保持在 0 点。这在希望循环访问最小元素但是不想执行完整堆排序的时候非常有用:
 
-```
+``` python
 >>> from heapq import heapify, heappop, heappush
 >>> data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]
 >>> heapify(data)                      # rearrange the list into heap order
@@ -519,7 +520,7 @@ decimal 模块提供了一个 Decimal 数据类型用于浮点数计算。相比
 
 例如，计算 70 分电话费的 5% 税计算，十进制浮点数和二进制浮点数计算结果的差别如下。如果在分值上舍入，这个差别就很重要了:
 
-```
+``` python
 >>> from decimal import *
 >>> round(Decimal('0.70') * Decimal('1.05'), 2)
 Decimal('0.74')
@@ -531,7 +532,7 @@ Decimal 的结果总是保有结尾的 0，自动从两位精度延伸到4位。
 
 高精度使 Decimal 可以执行二进制浮点数无法进行的模运算和等值测试:
 
-```
+``` python
 >>> Decimal('1.00') % Decimal('.10')
 Decimal('0.00')
 >>> 1.00 % 0.10
@@ -544,7 +545,7 @@ False
 ```
 
 decimal 提供了必须的高精度算法:
-```
+``` python
 >>> getcontext().prec = 36
 >>> Decimal(1) / Decimal(7)
 Decimal('0.142857142857142857142857142857142857')

@@ -13,17 +13,21 @@
 
 # TensorFlow 学习相关
 
+> Ps:之前听人说，TensorFlow就是画画图，就可以很容易的训练网络，我还以为TensorFlow很简单呢，现在看来，是我太天真了…… <br>
+神特么只是画画图，这个图指的是图论的结构，是你要把模型理清楚后，用图论的那种图表示出来，然后用代码手动把图表示出来。而不是像visio软件那样把框框拖到画布上就可以了的，太美的承诺只因太年轻。
+
 ## 安装
 
 学习完Python的语法，我们就要正式上手TensorFlow了，首先我们先配好环境，请看官网的配置说明[Install Guide](https://www.tensorflow.org/install/?hl=zh-cn)，配置CPU版比较方便，配置GPU版本就比较麻烦。
 
 ## Get Started
 
-```
+```python
 import tensorflow as tf
 ```
 
 导入`TensorFlow`的包，让`Python`可以访问到`TensorFlow`的所有类、模块、符号，大多数文档会假设你已经知道了这一步。
+
 
 ### The Computational Graph
 你可以把 `TensorFlow core` 程序看成两个部分:
@@ -31,7 +35,6 @@ import tensorflow as tf
 - 运行这个`Computational Graph`
 
 `Computational Graph`是一系列的TensorFlow的操作组成一个包含多个节点的图。
-
 
 
 ### [回首页](README.md)

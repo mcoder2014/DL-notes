@@ -30,4 +30,5 @@
 - [卷积神经网络](Convolutional_neural_network.md)
 - [TensorFlow](TensorFlow入门.md)
 - [Python Tips](Python_tips.md)
+- [My Python Tips](Python_tips2.md)
 - [人脸重建笔记](Large_pose_3d_face_reconstruction.md)
