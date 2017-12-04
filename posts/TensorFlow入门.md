@@ -36,5 +36,27 @@ import tensorflow as tf
 
 `Computational Graph`是一系列的TensorFlow的操作组成一个包含多个节点的图。
 
+### placeholder
+placeholder, a value that we'll input when we ask TensorFlow to run a computation
+
+placeholder算子声明了一个占位符，占位符没有值，在后面进行运算时才用数据替换占位符。（就是输入的参数）
+
+```python
+x = tf.placeholder(tf.float32, [None, 784])
+```
+
+
+### Variable
+A Variable is a modifiable tensor that lives in TensorFlow's graph of interacting operations. It can be used and even modified by the computation. For machine learning applications, one generally has the model parameters be Variables.
+
+Variable是TensorFlow的变量，用来存储和更新参数的值。（就是需要求出的模型的关键值）
+
+``` python
+W = tf.Variable(tf.zeros([784, 10]))
+```
+
+### Session
+TensorFlow relies on a highly efficient C++ backend to do its computation. The connection to this backend is called a session. The common usage for TensorFlow programs is to first create a graph and then launch it in a session.
+
 
 ### [回首页](../README.md)

@@ -1,9 +1,13 @@
 # DL-notes
 我最近在学习深度学习，这里是我的一些心得笔记啥的，更新频率不会很高。
 
+### [前往个人主页](http://mcoder.cc)
+
 ## 作者说明
 - 河海大学物联网应用与技术研究生
 - 联系方式： email: `mcoder2014@sina.com`
+- CSDN博客: [ChaoQun](http://blog.csdn.net/jcq521045349)
+- 个人主页: [Mcoder.cc](http://mcoder.cc)
 
 # 基础知识
 学习深度学习，首先我们需要对深度学习有一定的了解，这里比较公认的是[斯坦福大学吴恩达教授的机器学习课程](https://www.coursera.org/learn/machine-learning)。深度学习(`deep learning`)是机器学习拉出来的分支，目前广泛使用`TensorFlow`库进行开发学习。所以，学习深度学习最好需要学习一下`TensorFlow`，可以做到事半功倍。
@@ -28,7 +32,8 @@
 # 索引
 
 - [卷积神经网络](posts/Convolutional_neural_network.md)
+- [Linux Tips](posts/linux_tips.md)
 - [TensorFlow](posts/TensorFlow入门.md)
 - [Python Tips](posts/Python_tips.md)
-- [My Python Tips](posts/Python_tips2.md)
+- [My Python Tips](posts/python_tips2.md)
 - [人脸重建笔记](posts/Large_pose_3d_face_reconstruction.md)
