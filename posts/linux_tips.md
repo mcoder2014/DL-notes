@@ -1,6 +1,6 @@
 # linux相关的笔记
 
-### [回首页](README.md)
+### [回首页](../README.md)
 
 使用linux，肯定要多使用linux的`terminal`终端。而且很多时候使用`TensorFlow`都是搭建了一个GPU服务器供多个开发者共同使用，所以SSH远程连接过去更是常有的事，所以必须强迫自己学会应付没有显示界面的操作系统。
 
@@ -21,7 +21,7 @@
 
 ### 修改文件权限 chmod
 有的时候本地普通用户没有文件管理的权限，我们需要修改文件的使用权限。在UNIX系统家族里，文件或目录权限的控制分别以读取、写入、执行3种一般权限来区分，另有3种特殊权限可供运用。用户可以使用chmod指令去变更文件与目录的权限，设置方式采用文字或数字代号皆可。
-![](imgs/unix_file.png)
+![](../imgs/unix_file.png)
 
 ``` shell
 chmod(选项)(参数)
@@ -47,7 +47,7 @@ chmod a+x f01　　//对文件f01的u,g,o都设置可执行属性
 ### top
 ### htop
 相较top命令，htop有更清晰明了的显示。[安装](https://www.zhihu.com/question/20167594/answer/25812005)起来也很简便。
-![](imgs/htop_preview.jpg)
+![](../imgs/htop_preview.jpg)
 
 ## 文件传输
 ### ftp
@@ -55,4 +55,4 @@ chmod a+x f01　　//对文件f01的u,g,o都设置可执行属性
 当在windows系统下使用xShell工具远程连接linux服务器时，lrzsz工具包可以比较方便的在服务器和本地之间传输文件，使用ssh协议。本地向服务器传文件是`rz`，然后会有文件选择工具出现。服务器向本地传输文件是`sz 文件名`，然后会让你选择本地保存路径。
 
 
-### [回首页](README.md)
+### [回首页](../README.md)

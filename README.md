@@ -27,8 +27,8 @@
 
 # 索引
 
-- [卷积神经网络](Convolutional_neural_network.md)
-- [TensorFlow](TensorFlow入门.md)
-- [Python Tips](Python_tips.md)
-- [My Python Tips](Python_tips2.md)
-- [人脸重建笔记](Large_pose_3d_face_reconstruction.md)
+- [卷积神经网络](posts/Convolutional_neural_network.md)
+- [TensorFlow](posts/TensorFlow入门.md)
+- [Python Tips](posts/Python_tips.md)
+- [My Python Tips](posts/Python_tips2.md)
+- [人脸重建笔记](posts/Large_pose_3d_face_reconstruction.md)

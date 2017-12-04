@@ -1,6 +1,6 @@
 # TensorFlow 入门
 
-### [回首页](README.md)
+### [回首页](../README.md)
 
 虽然`TensorFlow`有好多个高层次的封装库，例如:`TFlearn `、`TensorLayer` 等。但据说在就业时或是部署时，要直接用`TensorFlow`来做效率较高，还是要学会基本的`TensorFlow`的操作才行。
 
@@ -37,4 +37,4 @@ import tensorflow as tf
 `Computational Graph`是一系列的TensorFlow的操作组成一个包含多个节点的图。
 
 
-### [回首页](README.md)
+### [回首页](../README.md)

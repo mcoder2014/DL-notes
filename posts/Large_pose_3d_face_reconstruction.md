@@ -1,6 +1,6 @@
 # Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric 文章的一点点理解梳理
 
-### [回首页](README.md)
+### [回首页](../README.md)
 
 # 写在前面
 因为我比较弱，在机器学习和三维重建方面都算是新手，所以并不是很理解这篇文章，只是梳理下文章中的模型结构，当做笔记，我相信大家更加优秀，应该能理解的层次比我更深。我这里梳理的顺序按照由小模块向大模块梳理。
@@ -37,4 +37,4 @@ Volumetric Regression Network(VRN) 本文作者使用的模型，由多个沙漏
 3.	[Jackson A S, Bulat A, Argyriou V, et al. Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression[J]. 2017. ](https://arxiv.org/abs/1703.07834)
 4.	[Veit A, Wilber M, Belongie S. Residual Networks Behave Like Ensembles of Relatively Shallow Networks[J]. 2016.](http://papers.nips.cc/paper/6556-residual-networks-behave-like-ensembles-of-relatively-shallow-networks)
 
-### [回首页](README.md)
+### [回首页](../README.md)
