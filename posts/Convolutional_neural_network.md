@@ -12,16 +12,36 @@
 # 结构
 一个卷积神经网络包含一个输入层、一个输出层和多个隐含层。一个典型的CNN包含 卷积层(`convolutional layers`)、池化层(`pooling layer`)、(`fully connected layers`) 和 (`normalization layers`)。
 
+## Input layer
+
+输入层
+
 ## Convolutional layer
+
 卷积层
+
 ## Pooling layer
+
 池化层
+
 ## ReLU layer
+
 Rectified Linear Units layer 线性整流层
+
 ## Fully connected layer
+
 全连接层
+
 ## Loss layer
+
 损失函数层
 
+# 运行流程
+
+循环迭代:
+1. `Sample` 输入一小批数据;
+2. `Forward` 向前推进这个模型，计算`Loss`;
+3. `Backprop` 反向传播算法，计算梯度;
+4. `Update` 利用计算的梯度值，更新参数。
 
 ### [回首页](../README.md)

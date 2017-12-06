@@ -37,6 +37,7 @@ import tensorflow as tf
 `Computational Graph`是一系列的TensorFlow的操作组成一个包含多个节点的图。
 
 ### placeholder
+
 >placeholder, a value that we'll input when we ask TensorFlow to run a computation
 
 placeholder算子声明了一个占位符，占位符没有值，在后面进行运算时才用数据替换占位符。（就是输入的参数）
@@ -66,6 +67,7 @@ tf.shape(t)  # [2, 2, 3]
 
 
 ### Variable
+
 >A Variable is a modifiable tensor that lives in TensorFlow's graph of interacting operations. It can be used and even modified by the computation. For machine learning applications, one generally has the model parameters be Variables.
 
 Variable是TensorFlow的变量，用来存储和更新参数的值。（就是需要求出的模型的关键值）
@@ -74,7 +76,40 @@ Variable是TensorFlow的变量，用来存储和更新参数的值。（就是�
 W = tf.Variable(tf.zeros([784, 10]))
 ```
 
+### tf.name_scope
+`tf.name_scope(name)`是用来解决定义域的问题的，很多时候，我们的层非常多，但又不想起那么多不同的变量名，就可以用这种方法。借助于With语法，就像是给划定了定义域一样的效果，制造了局部变量。
+```python
+# Hidden 1
+with tf.name_scope('hidden1'):
+    weights = tf.Variable(
+        tf.truncated_normal([IMAGE_PIXELS, hidden1_units],
+        stddev=1.0 / math.sqrt(float(IMAGE_PIXELS))),
+        name='weights')             # 全名就是 "hidden1/weights"
+
+    #  The tf.truncated_normal initializer generates a random distribution
+    #  with a given mean and standard deviation.Outputs random values
+    #  from a truncated normal distribution.The generated values follow
+    #  a normal distribution with specified mean and standard deviation,
+    #  except that values whose magnitude is more than 2 standard deviations
+    #  from the mean are dropped and re-picked.
+
+    biases = tf.Variable(tf.zeros([hidden1_units]),
+        name='biases')              # 全名就是 "hidden1/biases"
+    hidden1 = tf.nn.relu(tf.matmul(images, weights) + biases)
+
+  # Hidden 2
+with tf.name_scope('hidden2'):
+    weights = tf.Variable(
+        tf.truncated_normal([hidden1_units, hidden2_units],
+            stddev=1.0 / math.sqrt(float(hidden1_units))),
+            name='weights')         # 全名就是 "hidden2/weights"
+    biases = tf.Variable(tf.zeros([hidden2_units]),
+        name='biases')              # 全名就是 "hidden2/biases"
+    hidden2 = tf.nn.relu(tf.matmul(hidden1, weights) + biases)
+```
+
 ### Session
+
 >TensorFlow relies on a highly efficient C++ backend to do its computation. The connection to this backend is called a session. The common usage for TensorFlow programs is to first create a graph and then launch it in a session.
 
 Session是负责前后端通信的部分，我们的描绘出了模型的图以后，需要新建Session，然后才可以计算模型。

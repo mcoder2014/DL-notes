@@ -4,10 +4,12 @@
 
 使用linux，肯定要多使用linux的`terminal`终端。而且很多时候使用`TensorFlow`都是搭建了一个GPU服务器供多个开发者共同使用，所以SSH远程连接过去更是常有的事，所以必须强迫自己学会应付没有显示界面的操作系统。
 
-这里有一个比较不错的网站，叫做[Linux命令大全](http://man.linuxde.net/) 我也是写这篇文章时刚刚看到，那么文章中我想提到的命令，就不详细解释了，直接附一个帮助链接就足够了。
+这里有一个比较不错的网站，叫做[Linux命令大全](http://man.linuxde.net/) 我也是写这篇文章时刚刚看到。那么，这里我就不再献丑了，只记录我在学习`TensorFlow`时经常使用的到的一些语句命令。
 
 ## SSH远程
 配置linux服务器SSH远程访问的服务可以参考这篇博客:[如何在Ubuntu上开启SSH服务](http://blog.csdn.net/md521/article/details/52597398)。
+
+远程这个不必强调重要性了，基本是连接服务器必须会的。
 
 ### Pytty
 一个非常小且免费的ssh连接linux服务器的开源工具。[下载地址](http://www.putty.org/)
@@ -17,15 +19,22 @@
 
 ![](../imgs/xShell界面.jpg)
 
-## 文件
+### 终止当前命令
+这里需要提一下，有的时候我们在命令行里正在运行的命令，特别费时，或者是不想继续执行这个命令，我们又几个快捷键可以使用。
 ```
-# cd 当前文件路径的跳转
-# ls 列出文件/目录 列表
-# ll 列出文件/目录 列表（详细 包含权限）
-# df -h 列出磁盘信息
-# mkdir 创建文件夹
-# rm 删除文件夹
-# mv 移动文件/夹
+ctrl + c  # 结束脚本的继续执行
+ctrl + z  # 强行终止脚本(比较强硬)
+```
+
+## 文件
+```shell
+cd    # 当前文件路径的跳转
+ls    # 列出文件/目录 列表
+ll    # 列出文件/目录 列表（详细 包含权限）
+df -h # 列出磁盘信息
+mkdir # 创建文件夹
+rm    # 删除文件夹
+mv    # 移动文件/夹
 ```
 
 ### 修改文件权限 chmod
@@ -44,10 +53,10 @@ chmod(选项)(参数)
 <权限范围>-<权限设置>：关闭权限范围的文件或目录的该选项权限设置；
 <权限范围>=<权限设置>：指定权限范围的文件或目录的该选项权限设置；
 
-chmod u+x,g+w f01　　//为文件f01设置自己可以执行，组员可以写入的权限
+chmod u+x,g+w f01　　# 为文件f01设置自己可以执行，组员可以写入的权限
 chmod u=rwx,g=rw,o=r f01
 chmod 764 f01
-chmod a+x f01　　//对文件f01的u,g,o都设置可执行属性
+chmod a+x f01　　    # 对文件f01的u,g,o都设置可执行属性
 
 来自: http://man.linuxde.net/chmod
 ```
@@ -68,12 +77,12 @@ chmod a+x f01　　//对文件f01的u,g,o都设置可执行属性
 
 ## 文件传输
 ### ftp
-比较景点的传输协议，可以直接查询相关教程。
+比较经典的传输协议，可以直接查询相关教程。
 
 ### lrzsz
-当在windows系统下使用xShell工具远程连接linux服务器时，lrzsz工具包可以比较方便的在服务器和本地之间传输文件，使用ssh协议。本地向服务器传文件是`rz`，然后会有文件选择工具出现。服务器向本地传输文件是`sz 文件名`，然后会让你选择本地保存路径。
+当在windows系统下使用xShell工具远程连接linux服务器时，lrzsz工具包可以比较方便的在服务器和本地之间传输文件，使用ssh协议。本地向服务器传文件是`rz`，然后会有文件选择工具出现。服务器向本地传输文件是`sz 文件名`，然后会让你选择本地保存路径。这个东西[需要自己安装](http://blog.csdn.net/ljxfblog/article/details/38396421)。
 
-### 下载
+### 下载文件
 `wget` 是linux的下载文件的命令。
 ```shell
 wget http://www.linuxde.net/testfile.zip                            # 直下载文件
@@ -85,67 +94,68 @@ wget -b http://www.linuxde.net/testfile.zip                         # 后台下�
 来自: http://man.linuxde.net/wget
 ```
 ## 系统
-```
-# uname -a               # 查看内核/操作系统/CPU信息
-# head -n 1 /etc/issue   # 查看操作系统版本
-# cat /proc/cpuinfo      # 查看CPU信息
-# hostname               # 查看计算机名
-# lspci -tv              # 列出所有PCI设备
-# lsusb -tv              # 列出所有USB设备
-# lsmod                  # 列出加载的内核模块
-# env                    # 查看环境变量
+```shell
+uname -a               # 查看内核/操作系统/CPU信息
+head -n 1 /etc/issue   # 查看操作系统版本
+cat /proc/cpuinfo      # 查看CPU信息
+hostname               # 查看计算机名
+lspci -tv              # 列出所有PCI设备
+lsusb -tv              # 列出所有USB设备
+lsmod                  # 列出加载的内核模块
+env                    # 查看环境变量
 ```
 
 ## 资源
-```
-# free -m                # 查看内存使用量和交换区使用量
-# df -h                  # 查看各分区使用情况
-# du -sh <目录名>        # 查看指定目录的大小
-# grep MemTotal /proc/meminfo   # 查看内存总量
-# grep MemFree /proc/meminfo    # 查看空闲内存量
-# uptime                 # 查看系统运行时间、用户数、负载
-# cat /proc/loadavg      # 查看系统负载
+```shell
+free -m                # 查看内存使用量和交换区使用量
+df -h                  # 查看各分区使用情况
+du -sh <目录名>        # 查看指定目录的大小
+grep MemTotal /proc/meminfo   # 查看内存总量
+grep MemFree /proc/meminfo    # 查看空闲内存量
+uptime                 # 查看系统运行时间、用户数、负载
+cat /proc/loadavg      # 查看系统负载
 ```
 
 ## 磁盘和分区
-```
-# mount | column -t      # 查看挂接的分区状态
-# fdisk -l               # 查看所有分区
-# swapon -s              # 查看所有交换分区
-# hdparm -i /dev/hda     # 查看磁盘参数(仅适用于IDE设备)
-# dmesg | grep IDE       # 查看启动时IDE设备检测状况
+```shell
+mount | column -t      # 查看挂接的分区状态
+fdisk -l               # 查看所有分区
+swapon -s              # 查看所有交换分区
+hdparm -i /dev/hda     # 查看磁盘参数(仅适用于IDE设备)
+dmesg | grep IDE       # 查看启动时IDE设备检测状况
 ```
 
 ## 网络
-```
-# ifconfig               # 查看所有网络接口的属性
-# iptables -L            # 查看防火墙设置
-# route -n               # 查看路由表
-# netstat -lntp          # 查看所有监听端口
-# netstat -antp          # 查看所有已经建立的连接
-# netstat -s             # 查看网络统计信息
+```shell
+ifconfig               # 查看所有网络接口的属性
+iptables -L            # 查看防火墙设置
+route -n               # 查看路由表
+netstat -lntp          # 查看所有监听端口
+netstat -antp          # 查看所有已经建立的连接
+netstat -s             # 查看网络统计信息
 ```
 
 ## 进程
-```
-# ps -ef                 # 查看所有进程
-# top                    # 实时显示进程状态
+```shell
+ps -ef                 # 查看所有进程
+top                    # 实时显示进程状态
+htop                   # （需安装）实时显示进程状态
 ```
 
 ## 用户
-```
-# w                      # 查看活动用户
-# id <用户名>            # 查看指定用户信息
-# last                   # 查看用户登录日志
-# cut -d: -f1 /etc/passwd   # 查看系统所有用户
-# cut -d: -f1 /etc/group    # 查看系统所有组
-# crontab -l             # 查看当前用户的计划任务
+```shell
+w                          # 查看活动用户
+id <用户名>                # 查看指定用户信息
+last                      # 查看用户登录日志
+cut -d: -f1 /etc/passwd   # 查看系统所有用户
+cut -d: -f1 /etc/group    # 查看系统所有组
+crontab -l                # 查看当前用户的计划任务
 ```
 
 ## 服务
-```
-# chkconfig --list       # 列出所有系统服务
-# chkconfig --list | grep on    # 列出所有启动的系统服务
+```shell
+chkconfig --list              # 列出所有系统服务
+chkconfig --list | grep on    # 列出所有启动的系统服务
 ```
 
 ### [回首页](../README.md)

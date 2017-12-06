@@ -1,5 +1,5 @@
 # DL-notes
-我最近在学习深度学习，这里是我的一些心得笔记啥的，更新频率不会很高。
+我最近在学习深度学习，这里是我的一些心得笔记啥的，因为自己比较懒，有些复杂的东西不想整理，这里可能就比较杂的放一些东西。
 
 ### [前往个人主页](http://mcoder.cc)
 
@@ -31,9 +31,10 @@
 
 # 索引
 
-- [卷积神经网络](posts/Convolutional_neural_network.md)
 - [Linux Tips](posts/linux_tips.md)
 - [TensorFlow](posts/TensorFlow入门.md)
+- [CNN 卷积神经网络](posts/Convolutional_neural_network.md)
+- [Activation Function](posts/activation_function.md)
 - [Python Tips](posts/Python_tips.md)
 - [My Python Tips](posts/python_tips2.md)
-- [人脸重建笔记](posts/Large_pose_3d_face_reconstruction.md)
+- [人脸重建算法笔记](posts/Large_pose_3d_face_reconstruction.md)
