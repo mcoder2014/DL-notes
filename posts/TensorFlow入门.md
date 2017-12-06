@@ -127,5 +127,8 @@ with tf.Session() as sess:
     sess.run(...)
 ```
 
+### Optimizer
+算子，用来进行训练，最小化loss函数。
+
 
 ### [回首页](../README.md)
