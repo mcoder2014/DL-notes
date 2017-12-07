@@ -10,6 +10,7 @@
 
 **很NICE！对不对！**
 
+这里就放了两张`Tensorboard`的截图，第一张图介绍了`Tensorboard`可以展现很多曲线图标，第二张图让我们看到了`Tensorboard`可以进行多种学习算法的横向比较。
 ![Tensorboard截图](../imgs/tensorboard_namescope.jpg)
 ![对比截图](../imgs/tensorboard_compared.jpg)
 
@@ -47,6 +48,10 @@
 这里，`TensorFlow`官方也给出了教程，我就不嫌丑了。[Visualizing Learning](https://www.tensorflow.org/get_started/summaries_and_tensorboard?hl=zh-cn)、[Graph Visualization](https://www.tensorflow.org/get_started/graph_viz?hl=zh-cn)都是官方很优秀的教程。
 
 对其中的例子，我做了一点[自己的分析、梳理](Tensorflow_get_atarted_graph_visualization.md)。做的很简陋，因为自己理解了的东西，就有点懒惰，不想写一大堆进行解释，而自己没理解的东西也写不了多少……就酱……
+
+# Reference
+- [Tensorflow 自带可视化Tensorboard使用方法 附项目代码](http://blog.csdn.net/jerry81333/article/details/53004903)
+- [谷歌2017TensorFlow大会上介绍Tensorboard的一段演讲](https://github.com/dandelionmane/tf-dev-summit-tensorboard-tutorial)
 
 
 

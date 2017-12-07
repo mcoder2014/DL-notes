@@ -1,4 +1,4 @@
-# 对 `Graph Visualization` 的梳理
+# 对 Graph Visualization 的梳理
 
 ### [回首页](../README.md)
 
@@ -19,7 +19,7 @@
 
 同时，左上角也支持 **创建新的floder** 你可以输入关键字，将相关的图标显示在一栏中，这个关键字支持正则表达式。
 
-# 仅输出`graph`信息
+# 仅输出 graph 信息
 
 ![](../imgs/tensorboard_graph.jpg)
 

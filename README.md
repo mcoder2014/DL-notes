@@ -23,13 +23,23 @@
 
 这里是我对论文[Jackson A S, Bulat A, Argyriou V, et al. Large Pose 3D Face Reconstruction from a Single Image via Direct Volumetric CNN Regression[J]. 2017. ](https://arxiv.org/abs/1703.07834) 的一点点理解[笔记](Large_pose_3d_face_reconstruction.md)
 
+这里放一张不太深的卷积网络截图
+![](imgs\Conv2-9x5-Conv2Max2Conv2.png)
+
 ## TensorFlow
 在介绍学习[TensorFlow](https://www.tensorflow.org/?hl=zh-cn)之前我们肯定要先会使用Python。我发现了一个[Python入门指南](http://www.pythondoc.com/pythontutorial3/index.html)，内容很是详细，有编程基础的人，照着走一遍流程，不到两天就能学完（从下午到晚上，看到了第九章）。同样，这个也有英文原版，英语比较好的建议直接阅读[原版](https://docs.python.org/3.6/tutorial/index.html)。我为了自己能看的快一些，所以直接看的中文版。
 
 之后才是正式的开始学习TensorFlow，TensorFlow也是有自己的入门教程---[Getting Started With TensorFlow](https://www.tensorflow.org/get_started/get_started?hl=zh-cn)，据说写得还不错，也提供了数据集供你学习使用。
 
+## Tensorboard
+`Tensorboard`是`TensorFlow`的很强大的可视工具，对于我们学习理解一个算法，或是进行`Debug`排查错误，都非常的有帮助，并且，它显示的画面非常炫酷，让我和身边学习机器学习的人都表示震惊。这个工具，越早接触越好！
+
+这里放一张截图
+![截图](imgs/tensorboard_graph_2.jpg)
 
 # 索引
+
+这个索引按照我以为的应该`step by step`的顺序来排列
 
 - [Linux Tips](posts/linux_tips.md)
 - [Python Tips](posts/Python_tips.md)
@@ -37,6 +47,8 @@
 - [TensorFlow Tips](posts/TensorFlow入门.md)
 - [Tensorboard Tips](posts/Tensorboard_Tips.md)
 - [Graph Visualizing Understanding](posts/Tensorflow_get_atarted_graph_visualization.md)
+- [尝试理解 Tensor](posts/try_to_understand_tensor.md)
+- [尝试理解 Shape](posts/try_to_understand_shape.md)
 - [CNN 卷积神经网络](posts/Convolutional_neural_network.md)
 - [Activation Function](posts/activation_function.md)
 - [人脸重建算法笔记](posts/Large_pose_3d_face_reconstruction.md)
