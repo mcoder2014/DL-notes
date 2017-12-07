@@ -26,7 +26,25 @@
 `TensorFlow` 还可以把模型的Graph数出来，这样我们可以在真正的训练模型之前，先验证下模型的路线是否符合自己的心意，然后才开始读取数据，进行训练。
 
 我写了一个脚本来测试输出这个图，可以成功输出，重要的有几点：
-1. 使用`tf.name_scope`合理地对图进行整理，对重要的节点基于一级分类，对于不够重要的节点，将其隐藏在二级、三级目录以下。
+1. 使用`tf.name_scope`合理地对图进行整理，对重要的节点基于一级分类，对于不够重要的节点，将其隐藏在二级、三级目录以下。你将图用`name scope`整理的越合乎逻辑，你能看到的可视化效果越好。
+
+  > 你使用的`TensorFlow`的图可能有数以千计的节点数量，如果把所有的节点都平铺显示出来，那么你可能根本理不清之间的关系。你可以使用`variable names`来作为可视化划分层次的工具。默认情况只会显示最顶层的层次。这里就是一个使用`hidden`的 `tf.name_scope`：
+
+  ```python
+  import tensorflow as tf
+
+  with tf.name_scope('hidden') as scope:
+      a = tf.constant(5, name='alpha')
+      W = tf.Variable(tf.random_uniform([1, 2], -1.0, 1.0), name='weights')
+      b = tf.Variable(tf.zeros([1]), name='biases')
+  ```
+  从而，这些参数的名称变成:
+  - hidden/alpha
+  - hidden/weights
+  - hidden/biases
+
+  而默认情况下，这些分支会被显示为一个`hidden`节点，只有点击'+'号才会全部显示出来。
+
 2. 先创建`Session`，之后将`Session`初始化，然后就可以将图输出。
 
 用来将Graph写出summary到文件夹的中要代码:
