@@ -36,7 +36,7 @@
 - [My Python Tips](posts/python_tips2.md)
 - [TensorFlow Tips](posts/TensorFlow入门.md)
 - [Tensorboard Tips](posts/Tensorboard_Tips.md)
-- [Graph Visualizing Understanding](posts\Tensorflow_get_atarted_graph_visualization.md)
+- [Graph Visualizing Understanding](posts/Tensorflow_get_atarted_graph_visualization.md)
 - [CNN 卷积神经网络](posts/Convolutional_neural_network.md)
 - [Activation Function](posts/activation_function.md)
 - [人脸重建算法笔记](posts/Large_pose_3d_face_reconstruction.md)
