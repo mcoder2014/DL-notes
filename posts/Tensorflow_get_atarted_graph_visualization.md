@@ -45,14 +45,16 @@
 
   而默认情况下，这些分支会被显示为一个`hidden`节点，只有点击'+'号才会全部显示出来。
 
-2. 先创建`Session`，之后将`Session`初始化，然后就可以将图输出。
+2. 先创建`Session`，之后将`Session`初始化，然后就可以将图输出。 `sess.graph` 提供了查看 `tf.Session` 使用的图的功能。但如果你使用高 `API` 封装的 `tf.estimator.Estimator` 这样的模块的话，会自动图给输出到 log 目录的。
 
 用来将Graph写出summary到文件夹的中要代码:
 ```python
 merged = tf.summary.merge_all()         # 合并summary说粗话
 tf.global_variables_initializer().run()
+
 writer = tf.summary.FileWriter(FLAGS.log_dir + '/train')
 writer.add_graph(sess.graph)            # 选择输出sess的信息
+# 或 writer = tf.summary.FileWriter(FLAGS.log_dir + '/train', sess.graph)
 writer.close()                          # 使用完毕记得关闭
 ```
 
@@ -64,6 +66,6 @@ writer.close()                          # 使用完毕记得关闭
 - [Visualizing Learning](https://www.tensorflow.org/get_started/summaries_and_tensorboard?hl=zh-cn)
 - [Graph Visualization](https://www.tensorflow.org/get_started/graph_viz?hl=zh-cn)
 - [sample code](https://github.com/tensorflow/tensorflow/blob/r1.4/tensorflow/examples/tutorials/mnist/mnist_with_summaries.py)
-- [My test only output graph scripts](./scripts/test_output_graph.py)
+- [My test only output graph scripts](https://github.com/mcoder2014/DL-notes/blob/master/scripts/test_output_graph.py)
 
 ### [回首页](../README.md)
