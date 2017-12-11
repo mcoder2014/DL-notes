@@ -57,5 +57,20 @@ matrixAlt = tf.reshape(matrixB, [4, 3, -1])  # Reshape existing content into a
 yet_another = tf.reshape(matrixAlt, [13, 2, -1])  # ERROR!
 ```
 
+# None
+有的时候我们会看见初始化时，使用了 `None` 关键词，这是表示，shape有不知道的维度，需要在运行时决定。例如：
+``` python
+self.img = tf.placeholder(dtype= tf.float32, shape= (None, 256, 256, 3), name = 'input_img')
+```
+>   - Fully-known shape: has a known number of dimensions and a known size for each dimension. e.g. `TensorShape([16, 256])`
+  - Partially-known shape: has a known number of dimensions, and an unknown size for one or more dimension. e.g. `TensorShape([None, 256])`
+  - Unknown shape: has an unknown number of dimensions, and an unknown size in all dimensions. e.g. `TensorShape(None)`
+
+- shape 的所有维度全部已知。 `TensorShape([16, 256])`
+- shape 的部分维度确定，部分维度不确定， `TensorShape([None, 256, 256])`
+- shape 的所有维度均未知， `TensorShape(None)`
+
+
+
 
 ### [回首页](../README.md)
