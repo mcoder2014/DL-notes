@@ -1,4 +1,6 @@
 # DL-notes
+## 深度学习之从入门到放弃
+
 我最近在学习深度学习，这里是我的一些心得笔记啥的，因为自己比较懒，有些复杂的东西不想整理，这里可能就比较杂的放一些东西。
 
 ### [前往个人主页](http://mcoder.cc)
@@ -46,6 +48,7 @@
 - [My Python Tips](posts/python_tips2.md)
 - [TensorFlow Tips](posts/TensorFlow入门.md)
 - [Tensorboard Tips](posts/Tensorboard_Tips.md)
+- [MNIST Deep 梳理下数据流](/posts/Mnist_deep.md)
 - [Graph Visualizing Understanding](posts/Tensorflow_get_atarted_graph_visualization.md)
 - [尝试理解 Tensor](posts/try_to_understand_tensor.md)
 - [尝试理解 Shape](posts/try_to_understand_shape.md)
@@ -54,5 +57,6 @@
 - [保存模型](posts/saving_and_restoring.md)
 - [TensorFlow 常见问题](posts/tensorflow_FAQ.md)
 - [CNN 卷积神经网络](posts/Convolutional_neural_network.md)
+- [什么是 Batch Normalization](posts/batch_normalization.md)
 - [Activation Function](posts/activation_function.md)
 - [人脸重建算法笔记](posts/Large_pose_3d_face_reconstruction.md)
