@@ -12,6 +12,44 @@
 
 # 创建变量
 
+## tf.Variable
+创建变量有两种方法，第一种使用 `tf.Variable` 来创建.
+
+这种方法利用 initial_value 创建一个新的变量，创建的变量会被自动添加到 `[GraphKeys.GLOBAL_VARIABLES]` 中。
+
+如果设置 `trainable = True` ，这个变量也会被加入到 `[GraphKeys.TRAINABLE_VARIABLES]`中。
+
+```python
+__init__(
+    initial_value=None,
+    trainable=True,
+    collections=None,
+    validate_shape=True,
+    caching_device=None,
+    name=None,
+    variable_def=None,
+    dtype=None,
+    expected_shape=None,
+    import_scope=None,
+    constraint=None
+)
+```
+> Args:<br>
+`initial_value`: A Tensor , 或者是一个可以转换成 Tensor 的 py 对象。它作为初始化给 tf.Variable 进行初始化，这个初始化对象需要有 shape 信息，除非 `validate_shape = false` 。必须要指定 `dtype`。
+
+[Variable](https://tensorflow.google.cn/api_docs/python/tf/Variable)
+
+示例代码
+```python
+
+def weight_variable(shape):
+    """weight_variable generates a weight variable of a given shape."""
+    initial = tf.truncated_normal(shape, stddev=0.1)
+    # initial_value : A Tensor
+    return tf.Variable(initial)
+
+```
+
 ## tf.get_variable
 这个是最好的方法，需要你指定变量名称。
 
