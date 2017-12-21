@@ -210,12 +210,24 @@ htop                   # （需安装）实时显示进程状态
 ## 用户
 
 ```shell
-w                          # 查看活动用户
-id <用户名>                # 查看指定用户信息
+w                         # 查看活动用户
+id <username>             # 查看指定用户信息
 last                      # 查看用户登录日志
 cut -d: -f1 /etc/passwd   # 查看系统所有用户
 cut -d: -f1 /etc/group    # 查看系统所有组
 crontab -l                # 查看当前用户的计划任务
+passwd username           # 修改用户密码
+useradd -u userID username # 添加新用户
+useradd -u 1001 user1
+useradd - u userID -g groupId username # 添加用户，并指定用户组
+
+userdel -r username       # 删除用户及其文件夹
+groupadd -g groupID groupname   # 添加 group
+gpasswd -a username groupname   # 添加用户到一个group
+gpasswd -d username groupname   # 从组中删除一个用户
+
+chown -R username foldername    # 修改文件夹所有者
+chown -R .groupname foldername  # 修改文件夹所有组
 ```
 
 ## 服务
