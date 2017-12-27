@@ -238,4 +238,11 @@ chkconfig --list              # 列出所有系统服务
 chkconfig --list | grep on    # 列出所有启动的系统服务
 ```
 
+# Reference
+
+- [Linux命令大全](http://man.linuxde.net/)
+- [如何在Ubuntu上开启SSH服务](http://blog.csdn.net/md521/article/details/52597398)
+- [Putty](http://www.putty.org/)
+- [xShell](https://www.netsarang.com/download/software.html)
+
 ### [回首页](../README.md)
