@@ -190,7 +190,7 @@ x = conv_relu(input1, kernel_shape=[5, 5, 32, 32], bias_shape=[32])
 x = conv_relu(x, kernel_shape=[5, 5, 32, 32], bias_shape = [32])  # This fails.
 ```
 
-我们可以通过加上 `variable_scope` 来清晰我们要做的是创建新的变量操作。
+我们可以通过加上 `variable_scope` 来清晰我们要做的是创lin新的变量操作。
 ```python
 def my_image_filter(input_images):
     with tf.variable_scope("conv1"):
