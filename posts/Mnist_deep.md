@@ -62,7 +62,7 @@ padding 输入是字符串 'SAME' 或 'VALID'， SAME 是经过之后，输出�
 x_image = tf.reshape(x, [-1, 28, 28, 1])
 ```
 
-## 第一层卷积
+## 第一层网络
 
 ```python
 W_conv1 = weight_variable([5, 5, 1, 32])
@@ -77,7 +77,7 @@ h_pool1 = max_pool_2x2(h_conv1)
 ![卷积1](../imgs/mnist_deep_卷积1.jpg)
 ![池化1](../imgs/mnist_deep_池化1.jpg)
 
-## 第二层卷积
+## 第二层网络
 
 ```python
 W_conv2 = weight_variable([5, 5, 32, 64])

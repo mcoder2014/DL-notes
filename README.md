@@ -55,6 +55,7 @@
 - [Variable](posts/try_to_understand_variables.md)
 - [尝试理解 Graph](posts/try_to_understand_graph_session.md)
 - [保存模型](posts/saving_and_restoring.md)
+- [完整的 Tensorflow 训练流程](posts/TensorFlow_program.md)
 - [TensorFlow 常见问题](posts/tensorflow_FAQ.md)
 - [CNN 卷积神经网络](posts/Convolutional_neural_network.md)
 - [什么是 Batch Normalization](posts/batch_normalization.md)
