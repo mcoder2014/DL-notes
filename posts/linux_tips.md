@@ -26,9 +26,10 @@
 
 这里需要提一下，有的时候我们在命令行里正在运行的命令，特别费时，或者是不想继续执行这个命令，我们又几个快捷键可以使用。
 
-```
+``` shell
 ctrl + c  # 结束脚本的继续执行
-ctrl + z  # 强行终止脚本(比较强硬)
+ctrl + d  #
+ctrl + z  # 暂时放到后台
 ```
 
 ## 文件
@@ -237,6 +238,12 @@ chown -R .groupname foldername  # 修改文件夹所有组
 chkconfig --list              # 列出所有系统服务
 chkconfig --list | grep on    # 列出所有启动的系统服务
 ```
+
+## 后台执行命令
+``` shell
+nohup [command] > filename 2>&1 &
+```
+其中，command 是你原本需要执行的命令，filename是你想要把原程序输出写出到的文件，文件所在的文件夹路径必须已经存在，该输出文件不存在会自动新建。
 
 # Reference
 
