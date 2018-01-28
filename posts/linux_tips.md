@@ -168,6 +168,14 @@ lsmod                  # 列出加载的内核模块
 env                    # 查看环境变量
 ```
 
+### screenfetch
+很有意思的小程序，可以查看系统的一些基本信息，虽然用处不大，但是很有意思。**[Github](https://github.com/KittyKatt/screenFetch)**
+
+![](../imgs/screenfetch_1.jpg)
+
+并且，对于不同版本的操作系统，它有不同的 ASCII码 组成的图标的显示。
+![](../imgs/screenfetch.jpg)
+
 ## 资源
 
 ```shell
